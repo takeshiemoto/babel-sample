@@ -1,31 +1,26 @@
 <template>
-  <router-view />
+  <div>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item">
+          <router-link to="/">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/counter-app">Counter</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/todo-app">Todo</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/counter-vuex-app">Counter for Vuex</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/todo-vuex-app">Counter for Vuex</router-link>
+        </li>
+      </ul>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
-<style>
-/* Application-wide Styles */
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-h2,
-h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-}
-body {
-  margin: 2em;
-}
-body,
-input[type='text'],
-button {
-  color: #333;
-  font-family: Cambria, Georgia;
-}
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
+<style></style>
