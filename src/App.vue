@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-app>
     <nav>
       <ul class="nav">
         <li class="nav-item">
@@ -19,8 +19,15 @@
         </li>
       </ul>
     </nav>
-    <router-view />
-  </div>
+
+    <router-view></router-view>
+  </v-app>
 </template>
 
-<style></style>
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  name: 'App',
+});
+</script>
