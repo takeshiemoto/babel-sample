@@ -1,11 +1,17 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { StoreOptions } from 'vuex';
+import { RootState } from '@/store/types';
+import { counter } from './counter/counter.module';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+const store: StoreOptions<RootState> = {
+  state: {
+    version: '1.0.0',
+  },
+  modules: {
+    counter,
+  },
+};
+
+export default new Vuex.Store<RootState>(store);

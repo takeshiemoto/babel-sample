@@ -15,7 +15,7 @@
           <router-link to="/counter-vuex-app">Counter for Vuex</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/todo-vuex-app">Counter for Vuex</router-link>
+          <router-link to="/todo-vuex-app">Todo for Vuex</router-link>
         </li>
       </ul>
     </nav>
