@@ -1,6 +1,6 @@
 <template>
   <div class="todo">
-    <v-card class="mx-auto" max-width="475">
+    <v-card class="mx-auto">
       <TodoHeader></TodoHeader>
       <TodoForm @submit="addTodo($event)"></TodoForm>
       <v-divider></v-divider>
@@ -9,6 +9,8 @@
           v-for="todo in todoList"
           :key="todo.id"
           :todo="todo"
+          @update="updateTodo(todo)"
+          @delete="deleteTodo(todo)"
         ></TodoListItem>
       </TodoList>
     </v-card>
@@ -18,7 +20,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { v4 as uuidv4 } from 'uuid';
-import { Todo } from '@/Models/entities';
+import { Todo } from '@/models/entities';
 import TodoHeader from '@/components/Todo/TodoHeader.vue';
 import TodoForm from '@/components/Todo/TodoForm.vue';
 import TodoList from '@/components/Todo/TodoList.vue';
@@ -74,8 +76,5 @@ export default Vue.extend({
 <style scoped>
 .todo {
   padding: 20px;
-}
-.done {
-  text-decoration: line-through;
 }
 </style>

@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import { Todo } from '@/Models/entities';
+import { Todo } from '@/models/entities';
 
 export default Vue.extend({
   name: 'TodoListItem',
@@ -28,16 +28,18 @@ export default Vue.extend({
   },
   methods: {
     updateTodo() {
-      /** TODO */
-      console.log('RUN');
+      this.$emit('update');
     },
     deleteTodo() {
-      /** TODO */
-      console.log('RUN');
+      this.$emit('delete');
     },
   },
 });
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.done {
+  text-decoration: line-through;
+}
+</style>
