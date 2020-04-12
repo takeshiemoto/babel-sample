@@ -5,14 +5,15 @@
 <script lang="ts">
 import Vue from 'vue';
 import CounterContainer from '@/containers/Counter/CounterContainer.vue';
-import counter, { CounterService } from '@/classes/Counter';
+import counter from '@/services/counter.service';
+import { Counter } from '@/interfaces';
 
 export default Vue.extend({
   name: 'Counter',
   components: {
     CounterContainer,
   },
-  data(): { counter: CounterService } {
+  data(): { counter: Counter } {
     return {
       counter,
     };

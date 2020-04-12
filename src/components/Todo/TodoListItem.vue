@@ -16,13 +16,13 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import { Todo } from '@/models/entities';
+import { Task } from '@/models/entities';
 
 export default Vue.extend({
   name: 'TodoListItem',
   props: {
     todo: {
-      type: Object as PropType<Todo>,
+      type: Object as PropType<Task>,
       default: null,
     },
   },

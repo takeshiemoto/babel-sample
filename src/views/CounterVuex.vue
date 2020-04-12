@@ -4,15 +4,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import counter, { CounterFacade } from '@/store/counter/counterFacade';
+import counter from '@/store/counter/counterFacade';
 import CounterContainer from '@/containers/Counter/CounterContainer.vue';
+import { Counter } from '@/interfaces';
 
 export default Vue.extend({
   name: 'CounterVuex',
   components: {
     CounterContainer,
   },
-  data(): { counter: CounterFacade } {
+  data(): { counter: Counter } {
     return {
       counter,
     };
