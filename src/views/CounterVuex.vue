@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import counter from '@/store/counter/counterFacade';
+import counter from '@/store/counter/counter.facade';
 import CounterContainer from '@/containers/Counter/CounterContainer.vue';
 import { Counter } from '@/interfaces';
 
