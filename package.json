@@ -1,0 +1,21 @@
+{
+  "name": "babel-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx babel src/main.js --out-dir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-arrow-functions": "^7.13.0",
+    "@babel/preset-env": "^7.14.1"
+  },
+  "dependencies": {
+    "core-js": "^3.12.1"
+  }
+}
